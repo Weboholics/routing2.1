@@ -1,0 +1,10 @@
+﻿
+@{
+    string v = Url.Action("Content", "home", new { id = @"120-myArticle" });
+    string p = Url.Action("Content", "home", new { id = @"120-myArticle",culture = "sv-se"});
+}
+
+
+<p>Url.Action("Content", "home", new { id = @@"120-myArticle" })  @(v==null?"Fails, return null":"Success, result:"+v.ToString()) </p>
+
+<p>Url.Action("Content", "home", new { id = @@"120-myArticle",culture = "sv-se"}) @(p==null?"Fails, return null":"Success, result:"+p.ToString())</p>
